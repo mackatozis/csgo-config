@@ -2,7 +2,7 @@
 set -e
 set -u
 
-DIR=$(dirname "$(readlink -f $0 || realpath $0)")
+DIR=$(dirname "$(readlink -f "$0" || realpath "$0")")
 PLATFORM=$(uname)
 GREEN='\033[1;32m'
 NC='\033[0m' # No Color
