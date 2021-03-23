@@ -17,9 +17,7 @@ else
 fi
 
 ln -sf "${DIR}/simpleradar"/* resource/overviews/
-
 ln -sf "${DIR}/blank-panorama"/* panorama/videos/
-
 ln -sf "${DIR}/01-autoexec.cfg" cfg/autoexec.cfg
 
 if [ ! -d custom ]; then
