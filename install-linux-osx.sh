@@ -26,7 +26,7 @@ if [ ! -d custom ]; then
     ln -sf "${DIR}" cfg/custom
 fi
 
-threads=$(cat /proc/cpuinfo | grep -c processor)
+threads=$(grep -c processor /proc/cpuinfo)
 
 echo
 echo "Installation complete!"
