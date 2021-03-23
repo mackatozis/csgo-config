@@ -2,14 +2,14 @@
 set -e
 set -u
 
-DIR=$(dirname "$(readlink -f "$0" || realpath "$0")")
+DIR=$(dirname "$(readlink -f "${0}" || realpath "${0}")")
 PLATFORM=$(uname)
 GREEN='\033[1;32m'
 NC='\033[0m' # No Color
-echo $PLATFORM
-if [ "$PLATFORM" == 'Linux' ]; then
+echo "${PLATFORM}"
+if [ "${PLATFORM}" == 'Linux' ]; then
     cd "${HOME}/.local/share/Steam/steamapps/common/Counter-Strike Global Offensive/csgo"
-elif [ "$PLATFORM" == 'Darwin' ] || [ "$PLATFORM" == 'FreeBSD' ]; then
+elif [ "${PLATFORM}" == 'Darwin' ] || [ "${PLATFORM}" == 'FreeBSD' ]; then
     cd "${HOME}/Library/Application Support/Steam/SteamApps/common/Counter-Strike Global Offensive/csgo"
 else
     echo "The script is not compatible with your OS."
