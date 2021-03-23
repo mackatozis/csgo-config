@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+set -e
+set -u
 
 DIR=$(dirname "$(readlink -f $0 || realpath $0)")
 PLATFORM=$(uname)
